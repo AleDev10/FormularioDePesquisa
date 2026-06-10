@@ -1,0 +1,16 @@
+{
+  "name": "formulariodepesquisa",
+  "version": "1.0.0",
+  "description": "Formulario para os possiveis projetos a serem desenvolvidos",
+  "license": "ISC",
+  "author": "Alexandre Junqueiro/Yurivaldo Domingos",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "Express": "^3.0.1",
+    "nodemailer": "^8.0.11"
+  }
+}
