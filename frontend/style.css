@@ -1,0 +1,102 @@
+@font-face {
+  font-family: "montserrat-regular";
+  src: url(./assets/Montserrat-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "montserrat-bold";
+  src: url(./assets/Montserrat-Bold.ttf) format("truetype");
+}
+@font-face {
+  font-family: "montserrat-black";
+  src: url(./assets/Montserrat-Black.ttf) format("truetype");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "montserrat-regular";
+    font-size: 1rem;
+    color: white;
+}
+
+#main{
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    text-align: center;
+}
+img{
+    width: 80%;
+    height: 80%;
+}
+#caixa-separador{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+    background-color: #3d8780;
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+}
+
+h2{
+    font-family: "montserrat-bold";
+    font-size: 1.5rem;
+}
+.caixa-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: #1c5953;
+    padding: 1rem;
+    border-radius: 2rem;
+    width: 100%;
+    height: 20rem;
+    gap: 1rem;
+}
+.entradas-info{
+    border: none;
+    outline: none;
+    color: black;
+    padding: 1rem;
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+}
+
+#devs{
+    color: black;
+}
+#btn-enviar{
+    background-color: #1c5953;
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem;
+    width: 50%;
+    cursor: pointer;
+}
+#btn-enviar:hover{
+    background-color: #3d8780;
+    
+}
+#btn-enviar:hover:active{
+    background-color: #1c5953;
+    
+}
+
+@media (max-width:400px){
+p{
+    font-size: 0.5rem;
+}
+h2{
+    font-size: 0.8rem;
+}
+}
