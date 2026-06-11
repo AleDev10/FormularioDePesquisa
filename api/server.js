@@ -12,7 +12,7 @@ app.use(express.static(path.join("public")));
 
 // Rotas
 app.use("/", (req, res) => {
-  res,send("mundo lindo");
+  res.send("mundo lindo");
   //res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
