@@ -3,6 +3,7 @@ const express = require("express");
 const path = require("path");
 require("dotenv").config();
 const porta = process.env.PORTA || 3000;
+const senha = process.env.SENHA;
 
 // configurações do servidor
 const app = express();
