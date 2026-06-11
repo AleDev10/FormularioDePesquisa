@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(express.static(path.join("public")));
 
 // Rotas
-app.use("/", (req, res) => {
+app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
