@@ -2,14 +2,21 @@
 const respotas = document.getElementById("resposta1");
 const btnEnviar = document.getElementById("btn-enviar");
 
-function enviarResposta(texto) {
-    alert("Resposta: " + texto);
+ async function enviarResposta(texto) {
+  const resposta = await fetch("http://localhost:5000/enviar",{
+    method: "POST",
+    headers:{
+      "content-type": "application/json"
+    },
+    body: JSON.stringify({ text: texto })
+  })
+  console.log("Resposta: ", texto);
 }
 
 function verificarTextos(texto = "") {
   if (texto != "") {
     enviarResposta(texto);
-  }else{
+  } else {
     alert("Problemas com as respostas.");
   }
 }
@@ -20,5 +27,5 @@ function obterResposta() {
 }
 
 btnEnviar.addEventListener("click", () => {
-    obterResposta();
+  obterResposta();
 });
