@@ -15,7 +15,7 @@ function verificarTextos(texto = "") {
 }
 
 function obterResposta() {
-  let texto = respotas.textContent || "";
+  let texto = respotas.textContent;
   verificarTextos(texto);
 }
 
