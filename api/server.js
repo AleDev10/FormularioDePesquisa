@@ -167,8 +167,8 @@ app.post("/enviar", (req, res) => {
   res.json({ message: "Email enviado com sucesso!" });
 });
 
-app.listen(porta, () => {
+/* app.listen(porta, () => {
   console.log(`Servidor rodando na porta http://localhost:${porta}`);
-});
+}); */
 
 module.exports = app;

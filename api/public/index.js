@@ -5,7 +5,7 @@ respotas = [...respotas];
 const btnEnviar = document.getElementById("btn-enviar");
 
  async function enviarResposta(conteudo) {
-  const resposta = await fetch("http://localhost:5000/enviar",{
+  const resposta = await fetch("https://formulario-de-pesquisa-psi.vercel.app/enviar",{
     method: "POST",
     headers:{
       "content-type": "application/json"
