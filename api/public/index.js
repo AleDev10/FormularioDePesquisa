@@ -10,8 +10,10 @@ const btnEnviar = document.getElementById("btn-enviar");
     headers:{
       "content-type": "application/json"
     },
-    body: JSON.stringify(conteudo)
+    body: conteudo
   })
+  
+  alert("enviado com sucesso");
   console.log("enviado com sucesso");
   console.table(conteudo);
 }
@@ -24,7 +26,8 @@ function filtrar_respostas(filhasRespostas){
 }
 
 function verificarTextos(conteudo) {
-  enviarResposta(conteudo);
+  let conteudos =  JSON.stringify(conteudo);  
+  enviarResposta(conteudos);
   ApagarCampos(respotas);
 }
 
