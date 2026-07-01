@@ -34,6 +34,7 @@ const transportador = nodemailer.createTransport({
 });
 
 async function enviarEmail(texto) {
+  console.log(texto);
   try {
     const mensagem = await transportador.sendMail({
       from: emailOrigem,
@@ -82,8 +83,6 @@ app.get("/", (req, res) => {
 
 app.post("/enviar", (req, res) => {
   let conteudo = req.body;
-
-  console.log(conteudo);
   enviarEmail(conteudo);
   res.json({ message: "Email enviado com sucesso!" });
 });
