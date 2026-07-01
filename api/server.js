@@ -1,7 +1,12 @@
 // Importações essenciais
 const express = require("express");
 const path = require("path");
-require("dotenv").config();
+
+// Carregar .env APENAS em desenvolvimento
+if (process.env.NODE_ENV !== 'production') {
+  require("dotenv").config();
+}
+
 const nodemailer = require("nodemailer");
 const { type } = require("os");
 
