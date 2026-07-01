@@ -1,3 +1,15 @@
 {
-    "version": 2
+    "version": 2,
+    "builds":[
+        {
+            "src":"api/server.js",
+            "use":"@versel/node"
+        }
+    ],
+    "routes":[
+        {
+            "src":"/(.*)",
+            "dist":"api/server.js"
+        }
+    ]
 }
