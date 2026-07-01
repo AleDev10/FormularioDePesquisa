@@ -2,9 +2,13 @@
 const express = require("express");
 const path = require("path");
 
-// Carregar .env APENAS em desenvolvimento
-if (process.env.NODE_ENV !== 'production') {
+const env = process.env.NODE_ENV || "desenvolvimento";
+
+if (env === "produção") {
+  console.log("Rodando em produção");
+}else{
   require("dotenv").config();
+  console.log("Rodando em desenvolvimento");
 }
 
 const nodemailer = require("nodemailer");
@@ -79,7 +83,7 @@ app.get("/", (req, res) => {
 app.post("/enviar", (req, res) => {
   let conteudo = req.body;
 
-  console.log(typeof conteudo);
+  console.log(conteudo);
   enviarEmail(conteudo);
   res.json({ message: "Email enviado com sucesso!" });
 });
