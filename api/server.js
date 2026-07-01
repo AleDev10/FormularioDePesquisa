@@ -41,7 +41,7 @@ async function enviarEmail(texto) {
     let mensagem = await transportador.sendMail({
       from: emailOrigem,
       to: emailDestino,
-      subject: "FORMULÁRIO DE PESQUISA (teste)",
+      subject: "FORMULÁRIO DE PESQUISA",
       html: `
       <h1>Formulário de Pesquisa</h1>
       <h2>Perguntas e Respostas</h2>
