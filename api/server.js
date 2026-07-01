@@ -6,7 +6,7 @@ const env = process.env.NODE_ENV || "desenvolvimento";
 
 if (env === "produção") {
   console.log("Rodando em produção");
-}else{
+} else {
   require("dotenv").config();
   console.log("Rodando em desenvolvimento");
 }
@@ -25,18 +25,20 @@ const app = express();
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
 
-const transportador = nodemailer.createTransport({
-  service: servico,
-  auth: {
-    user: emailOrigem,
-    pass: senha,
-  },
-});
-
 async function enviarEmail(texto) {
-  console.log(texto);
+  console.log("entrou na função enviarEmail()");
   try {
-    const mensagem = await transportador.sendMail({
+    console.log("funcionou");
+
+    const transportador = nodemailer.createTransport({
+      service: servico,
+      auth: {
+      user: emailOrigem,
+      pass: senha,
+      },
+    });
+
+    let mensagem = await transportador.sendMail({
       from: emailOrigem,
       to: emailDestino,
       subject: "FORMULÁRIO DE PESQUISA (teste)",
@@ -81,10 +83,15 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
-app.post("/enviar", (req, res) => {
-  let conteudo = req.body;
-  enviarEmail(conteudo);
-  res.json({ message: "Email enviado com sucesso!" });
+app.post("/enviar",async (req, res) => {
+  try {
+    console.log("entrou na rota /enviar");
+    let conteudo = req.body;
+    await enviarEmail(conteudo);
+    res.json({ message: "Email enviado com sucesso!" });
+  } catch (error) {
+    console.log(" erro [rota ('/enviar')]", error);
+  }
 });
 
 /* app.listen(porta, () => {
