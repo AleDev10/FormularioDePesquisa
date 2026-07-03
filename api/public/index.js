@@ -13,14 +13,14 @@ const btnEnviar = document.getElementById("btn-enviar");
     body: conteudo
   })
   
-  alert("enviado com sucesso");
+  alert("Formulário enviado com sucesso!Muito obrigado por participar da pesquisa.");
   console.log("enviado com sucesso");
   console.table(conteudo);
 }
 
 function filtrar_respostas(filhasRespostas){
   if(filhasRespostas!=""){
-    var especial = /[^a-zA-Z0-9 ,.ç~`´;:\s]/.test(filhasRespostas);
+    var especial = /[^a-zA-Z0-9 ,.;:áéíóúàèìòùâêîôûãõçÁÉÍÓÚÀÈÌÒÙÂÊÎÔÛÃÕÇ\s]/.test(filhasRespostas);
   } 
   return especial;
 }
@@ -45,7 +45,7 @@ function verificarContiudo(){
     }
   });
   if(conteudoVasio==true){
-    alert("Algum campo está vazio");
+    alert("Não pode enviar o formulário com respostas vazios.");
   }else{
     analizarCampos();
   }
@@ -79,7 +79,7 @@ function analizarCampos() {
     resanalizeRespostas=(analizeRespostas[i]||analizeRespostas[i+1]);
   }
   if(resanalizeRespostas==true){
-    alert("Problemas com as respostas.");
+    alert("Não pode enviar o formulário com caracteres especiais. Cuidado com os acentos, eles são permitidos. Mas caracteres especiais como: @, #, $, %, &, *, etc... não são permitidos.");
   }else{
     for (let i = 0;i<respotas.length; i++) {
       respostasPtontas[i]=respotas[i].value;

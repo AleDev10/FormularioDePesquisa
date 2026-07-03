@@ -1,72 +1,142 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <link rel="icon" href="./assets/faveicon.png" type="image/png">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" href="./assets/faveicon.png" type="image/png" />
     <title>Formulario</title>
-</head>
-<body>
+  </head>
+  <body>
     <div id="main">
-        <img src="./assets/logo2.png" alt="logo">
-        <div id="caixa-separador">
-            <h2>CONTEXTO</h2>
-            <div class="caixa-info">
-                <p>Sabendo que existem pessoas<br>que usão os serviços de taxistas para<br>
-                tirar uma mercadoria de uma cidade<br>para outra. Responde as seguintes<br>
-            questões com argumentos detalhados.<br>--MUITO OBRIGADO--</p>
-            </div>
-            <h2>PERGUNTAS</h2>
-            <div class="caixa-info">
-                <p>1-Já usou este tipo de serviço?</p>
-                <textarea name="descricao" class="entradas-info" rows="10" id="resposta1"></textarea>
-            </div>
-            <div class="caixa-info">
-                <p>2-O que já ouviu sobre este tipo de serviço?</p>
-                <textarea name="descricao" class="entradas-info" rows="10" id="resposta2"></textarea>
-            </div>
-            <div class="caixa-info">
-                <p>3-Gostaria de ter um intermediario a controlar o prosseço de transporte da encomenda?</p>
-                <textarea name="descricao" class="entradas-info" rows="10" id="resposta3"></textarea>
-            </div>
-            <div class="caixa-info">
-                <p>4-Acha que trocar o contato é a maneira mais segura de garantir que a encomenda chegue?</p>
-                <textarea name="descricao" class="entradas-info" rows="10" id="resposta4"></textarea>
-            </div>
-            <div class="caixa-info">
-                <p>5-O que farias se a encomenda não chegasse ao destino?</p>
-                <textarea name="descricao" class="entradas-info" rows="10" id="resposta5"></textarea>
-            </div>
-            <div class="caixa-info">
-                <p>6-Confiarias a tua encomenda a um total estranho?</p>
-                <textarea name="descricao" class="entradas-info" rows="10" id="resposta6"></textarea>
-            </div>
-            <div class="caixa-info">
-                <p>7-Aceitarias fazer um dinheiro extra durante a sua viagem?</p>
-                <textarea name="descricao" class="entradas-info" rows="10" id="resposta7"></textarea>
-            </div>
-            <div class="caixa-info">
-                <p>8-Que garantias darias ao dono da encomenda?</p>
-                <textarea name="descricao" class="entradas-info" rows="10" id="resposta8"></textarea>
-            </div>
-            <div class="caixa-info">
-                <p>9-Como tu defines que uma pessoa pode levar a sua encomenda?</p>
-                <textarea name="descricao" class="entradas-info" rows="10" id="resposta9"></textarea>
-            </div>
-            <div class="caixa-info">
-                <p>10-Dirias que existe um problema na forma como estes serviços são executados atualmente?</p>
-                <textarea name="descricao" class="entradas-info" rows="10" id="resposta10"></textarea>
-            </div>
-            <div class="caixa-info">
-                <p>11-Como poderias melhorar esse tipo de serviço?</p>
-                <textarea name="descricao" class="entradas-info" rows="10" id="resposta11"></textarea>
-            </div>
-           
+      <img src="./assets/logo2.png" alt="logo" />
+      <div id="caixa-separador">
+        <h2>CONTEXTO</h2>
+        <div class="caixa-info">
+          <p>
+            Sabendo que existem pessoas<br />que usão os serviços de taxistas
+            para<br />
+            tirar uma mercadoria de uma cidade<br />para outra. Responde as
+            seguintes<br />
+            questões com argumentos detalhados.<br />Por favor evite uso de
+            certos cacacteres especiais<br />--MUITO OBRIGADO--
+          </p>
         </div>
-        <p id="devs">Desenvolvedores:<br>Alexandre Junqueiro / Yurivaldo Domingos</p>
-        <button id="btn-enviar">Enviar</button>
+        <h2>PERGUNTAS</h2>
+        <div class="caixa-info">
+          <p>1-Já usou este tipo de serviço?</p>
+          <textarea
+            name="descricao"
+            class="entradas-info"
+            rows="10"
+            id="resposta1"
+          ></textarea>
+        </div>
+        <div class="caixa-info">
+          <p>2-O que já ouviu sobre este tipo de serviço?</p>
+          <textarea
+            name="descricao"
+            class="entradas-info"
+            rows="10"
+            id="resposta2"
+          ></textarea>
+        </div>
+        <div class="caixa-info">
+          <p>
+            3-Gostaria de ter um intermediario a controlar o processo de
+            transporte da encomenda?
+          </p>
+          <textarea
+            name="descricao"
+            class="entradas-info"
+            rows="10"
+            id="resposta3"
+          ></textarea>
+        </div>
+        <div class="caixa-info">
+          <p>
+            4-Acha que trocar o contato é a maneira mais segura de garantir que
+            a encomenda chegue?
+          </p>
+          <textarea
+            name="descricao"
+            class="entradas-info"
+            rows="10"
+            id="resposta4"
+          ></textarea>
+        </div>
+        <div class="caixa-info">
+          <p>5-O que farias se a encomenda não chegasse ao destino?</p>
+          <textarea
+            name="descricao"
+            class="entradas-info"
+            rows="10"
+            id="resposta5"
+          ></textarea>
+        </div>
+        <div class="caixa-info">
+          <p>6-Confiarias a tua encomenda a um total estranho?</p>
+          <textarea
+            name="descricao"
+            class="entradas-info"
+            rows="10"
+            id="resposta6"
+          ></textarea>
+        </div>
+        <div class="caixa-info">
+          <p>7-Aceitarias fazer um dinheiro extra durante a sua viagem?</p>
+          <textarea
+            name="descricao"
+            class="entradas-info"
+            rows="10"
+            id="resposta7"
+          ></textarea>
+        </div>
+        <div class="caixa-info">
+          <p>8-Que garantias darias ao dono da encomenda?</p>
+          <textarea
+            name="descricao"
+            class="entradas-info"
+            rows="10"
+            id="resposta8"
+          ></textarea>
+        </div>
+        <div class="caixa-info">
+          <p>9-Como tu defines que uma pessoa pode levar a sua encomenda?</p>
+          <textarea
+            name="descricao"
+            class="entradas-info"
+            rows="10"
+            id="resposta9"
+          ></textarea>
+        </div>
+        <div class="caixa-info">
+          <p>
+            10-Dirias que existe um problema na forma como estes serviços são
+            executados atualmente?
+          </p>
+          <textarea
+            name="descricao"
+            class="entradas-info"
+            rows="10"
+            id="resposta10"
+          ></textarea>
+        </div>
+        <div class="caixa-info">
+          <p>11-Como poderias melhorar esse tipo de serviço?</p>
+          <textarea
+            name="descricao"
+            class="entradas-info"
+            rows="10"
+            id="resposta11"
+          ></textarea>
+        </div>
+      </div>
+      <p id="devs">
+        Desenvolvedores:<br />Alexandre Junqueiro / Yurivaldo Domingos
+      </p>
+      <button id="btn-enviar">Enviar</button>
     </div>
     <script src="./index.js"></script>
-</body>
+  </body>
 </html>
